@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # steak spagetti
 ##################################################### comentaar
 # start met een hekje 
@@ -24,3 +25,7 @@ str()
 
 
 print (f'{naam} is {leeftijd} jaar oud')
+=======
+# steak
+# aapje
+>>>>>>> fb195666baea3c52f094ab4a1f0562bcbbb41c98
