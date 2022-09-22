@@ -1,7 +1,9 @@
 naam = input('hoe heet u?') .lower()
 gender = input ('ben je een man of een vrouw?')
-haren = int(input('hoelang zijn uw krullen'))
-snor = int(input("hoe breed is uw snor in cm?"))
+if gender == 'vrouw':
+    haren = int(input('hoelang zijn uw krullen'))
+elif gender == 'man':
+    snor = int(input("hoe breed is uw snor in cm?"))
 dieren = int(input('hoeveel jaar praktijervaring heeft u met dieren-dressuur?'))
 jongleren = int(input('hoeveeljaar ervaring met jongleren heeft u?'))
 acrobatiek = int(input('hoeveel jaar ervaring heeft u voor praktijk ervaring met acrobatiek?'))
@@ -25,6 +27,30 @@ if dieren >= 4 or jongleren >= 5 or acrobatiek >= 4 and rijbewijs == 'ja' and ho
 
 else:
     print('je bent niet geslaagd')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,13 +136,8 @@ else:
 #                                                 print('je mag niet verder gaan met solliciteren')
 #                                             elif leeftijd >= 18:
 
-
-
-
 # hoeveel = int(input('hoeveel jaar praktijervaring heeft u met dieren-dressuur?'))
 # jongleren = int(input('hoeveeljaar ervaring met jongleren heeft u?'))
 # acrobatiek = int(input('hoeveel jaar ervaring heeft u voor praktijk ervaring met acrobatiek?'))
 
-
-# if hoeveel >= 4:
     
