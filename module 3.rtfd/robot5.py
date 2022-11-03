@@ -6,7 +6,7 @@ robotArm = RobotArm('exercise 5')
 robotArm.speed=4
 for x in range(1,8):
     robotArm.moveRight()
-for x in range(7):
+for x in range(8):
     robotArm.grab()
     robotArm.moveRight()
     robotArm.drop()
