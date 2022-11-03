@@ -10,7 +10,7 @@ for x in range(8):
     robotArm.grab()
     robotArm.moveRight()
     robotArm.drop()
-    if x < 8:
+    if x < 7:
     robotArm.moveLeft()
     robotArm.moveLeft()
 # Na jouw code wachten tot het sluiten van de window:
