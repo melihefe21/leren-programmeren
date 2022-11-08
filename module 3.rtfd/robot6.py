@@ -20,4 +20,3 @@ for x in range(6):
 
 # Na jouw code wachten tot het sluiten van de window:
 robotArm.wait()
-a
