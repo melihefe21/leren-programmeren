@@ -1,0 +1,17 @@
+import random
+
+kaarten = ("harten", "klaveren", "schoppen" , "ruiten")
+nummer = ("2","3","4","5","6","7","8","9","10","boer","vrouw","heer","aas")
+joker = ["joker","joker"]
+
+for i in (kaarten):
+    for x in (nummer):
+        bijvoegen = i + x
+        joker.append(bijvoegen)
+
+random.shuffle(joker)
+for x in range(1,8):
+    print(f'Kaart {x}: {joker[x]}')
+    joker.pop(x)
+
+print(f"kaarten= {len(joker)} {joker}")
