@@ -6,12 +6,12 @@ joker = ["joker","joker"]
 
 for i in (kaarten):
     for x in (nummer):
-        bijvoegen = i + x
+        bijvoegen = i +' '+ x
         joker.append(bijvoegen)
 
 random.shuffle(joker)
 for x in range(1,8):
-    print(f'Kaart {x}: {joker[x]}')
-    joker.pop(x)
+    print(f'Kaart {x}: {joker[0]}')
+    joker.pop(0)
 
 print(f"kaarten= {len(joker)} {joker}")

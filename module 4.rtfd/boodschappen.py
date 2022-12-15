@@ -7,9 +7,11 @@ while x == True:
     print('Hoeveel wil jij ervan hebben?')
     boodschappen_aantal = int(input())
 
-    boodschappenlijst.update({boodschappen_items: boodschappen_aantal})
+    
     if boodschappen_items in boodschappenlijst:
         boodschappenlijst[boodschappen_items] += boodschappen_aantal
+    else:
+        boodschappenlijst.update({boodschappen_items: boodschappen_aantal})
     quit = input('Typ Stop om te stoppen: ').lower()
     if quit == 'stop':
         x = False
