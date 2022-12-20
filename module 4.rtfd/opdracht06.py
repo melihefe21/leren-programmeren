@@ -1,4 +1,5 @@
 from fruitmand import fruitmand
 
-gewicht_appel = fruitmand [1]['weight']
-print(gewicht_appel)
+for appel in fruitmand:
+    if appel['name'] == 'appel':
+        print(appel['weight'])
