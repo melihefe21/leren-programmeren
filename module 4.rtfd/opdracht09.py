@@ -1,5 +1,13 @@
 from fruitmand import fruitmand
 
-fruitmand.pop(4)
+colors = []
+
+for fruit in fruitmand:
+    if fruit['name'] == 'druif':
+        fruitmand.remove(fruit)
+
 for x in fruitmand:
-    print(x['color'])
+    if x['color'] not in colors:
+        colors.append(x['color'])
+
+print(", ".join(colors))
