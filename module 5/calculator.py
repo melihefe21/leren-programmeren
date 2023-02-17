@@ -33,7 +33,7 @@ def perform_operation(choice, n1, n2=None):
 def main():
   while True:
     print("Wat wilt u doen? A) getallen optellen, B) getallen aftrekken, C) getallen vermenigvuldigen, D) getallen delen, E) getal ophogen, F) getal verlagen, G) getal verdubbelen of H) getal halveren?")
-    choice = input()
+    choice = input().upper()
 
     if choice in ['A', 'B', 'C', 'D']:
       print("Voer het eerste getal in:")
