@@ -10,23 +10,27 @@ def multiplication(number1, number2):
 def division(number1, number2):
   return number1 / number2
 
-def perform_operation(choice, n1, n2=None):
+def perform_operation():
   if choice == 'A':
-    result = addition(n1, n2)
+    result = addition(float(input("num1: ")), float(input("num2: "))
   elif choice == 'B':
-    result = subtraction(n1, n2)
+    result = subtraction(float(input("num1: ")), float(input("num2: "))
   elif choice == 'C':
     result = multiplication(n1, n2)
   elif choice == 'D':
     result = division(n1, n2)
   elif choice == 'E':
+    n1 = float(input("Getal: "))
     result = addition(n1, 1)
   elif choice == 'F':
-    result = subtraction(n1, 1)
+      n1 = float(input("Getal: "))
+      result = subtraction(n1, 1)
   elif choice == 'G':
-    result = multiplication(n1, 2)
+      n1 = float(input("Getal: "))
+      result = multiplication(n1, 2)
   elif choice == 'H':
-    result = division(n1, 2)
+      n1 = float(input("Getal: "))
+
   
   return result
 
@@ -37,12 +41,12 @@ def main():
 
     if choice in ['A', 'B', 'C', 'D']:
       print("Voer het eerste getal in:")
-      n1 = int(input())
+      n1 = float(input())
       print("Voer het tweede getal in:")
-      n2 = int(input())
+      n2 = float(input())
     else:
       print("Voer het getal in:")
-      n1 = int(input())
+      n1 = float(input())
       n2 = None
 
     result = perform_operation(choice, n1, n2)
