@@ -3,6 +3,7 @@ import time
 score = 0
 loop = True
 if loop == True:
+        
     def fight(i: int):
         x = random.randint(1, 4)
         if 0 < i < 5:

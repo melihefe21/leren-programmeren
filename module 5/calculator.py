@@ -10,11 +10,11 @@ def multiplication(number1, number2):
 def division(number1, number2):
   return number1 / number2
 
-def perform_operation():
+def perform_operation(n2=None):
   if choice == 'A':
-    result = addition(float(input("num1: ")), float(input("num2: "))
+    result = addition(n1, n2)
   elif choice == 'B':
-    result = subtraction(float(input("num1: ")), float(input("num2: "))
+    result = subtraction(n1, n2)
   elif choice == 'C':
     result = multiplication(n1, n2)
   elif choice == 'D':
