@@ -10,7 +10,7 @@ def multiplication(number1, number2):
 def division(number1, number2):
   return number1 / number2
 
-def perform_operation(n2=None):
+def perform_operation(choice, n2=None , ):
   if choice == 'A':
     result = addition(n1, n2)
   elif choice == 'B':
