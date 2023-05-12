@@ -17,10 +17,10 @@ BLUE = (0, 0, 255)
 board = os.path.dirname(os.path.realpath(__file__)) + 'board.png'
 
 # pionnen
-red_pawn = pygame.image.load('red_pawn.png')
-green_pawn = pygame.image.load('green_pawn.png')
-blue_pawn = pygame.image.load('blue_pawn.png')
-yellow_pawn = pygame.image.load('yellow_pawn.png')
+red_pawn = os.path.dirname(os.path.realpath(__file__)) + 'red_pawn.png'
+green_pawn = os.path.dirname(os.path.realpath(__file__)) + 'green_pawn.png'
+blue_pawn = os.path.dirname(os.path.realpath(__file__)) + 'blue_pawn.png'
+yellow_pawn = os.path.dirname(os.path.realpath(__file__)) + 'yellow_pawn.png'
 
 # spelbord coördinaten
 BOARD_X, BOARD_Y = 50, 50
@@ -65,3 +65,4 @@ while running:
 
 # afsluiten
 pygame.quit()
+.
