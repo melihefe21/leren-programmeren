@@ -1,7 +1,9 @@
 import random
 import time
+print("check0")
 def play_game():
     play_again = 'yes'
+    print("check1")
     while play_again == 'yes':
         print("Let's play a game!")        
         def fight(i: int):
@@ -129,3 +131,5 @@ def play_game():
             userNumber = int(input("Enter a number between 1-5"))
             bossFight(userNumber)
         print(f"Congrats '{name}'! you saved the village and you are their saviour!")
+        
+    return play_game()
