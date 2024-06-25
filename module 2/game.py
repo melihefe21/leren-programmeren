@@ -1,13 +1,17 @@
 import random
 import time
-print("check0")
-def play_game():
-    play_again = 'yes'
-    print("check1")
-    while play_again == 'yes':
-        print("Let's play a game!")        
-        def fight(i: int):
-            x = random.randint(1, 4)
+# eerst import 
+#dan functie 
+# dan variabelen en canstantes
+# dan programma
+# wat is het doel van deze functie?
+# bij voorkeur geef je iets terug
+#deze functie handelt een gevecht af en geeft terug of de gebruiker heeft gewonnen of verloeren
+def fight(max_geuss:) -> bool:
+            MIN_GEUSS = 1
+            MAX_GEUSS = 4
+            user_wins = True
+            number_to_enter = random.randint(1, 4)
             if 0 < i < 5:
                 if i == x:
                     print("You died")
@@ -19,7 +23,7 @@ def play_game():
                 print("Game over...")
                 exit()
 
-        def escape(i: int): 
+def escape(i: int): 
             x = random.randint(1, 2)
             if 0 < i < 3:
                 if i == x:
@@ -32,7 +36,7 @@ def play_game():
                 print("Game over...")
                 exit()
 
-        def fighting(i: str):
+def fighting(i: str):
             if i == "FIGHT":
                 if weapon == "NO":
                     print("You lost because you didnt have a sword...")
@@ -46,6 +50,15 @@ def play_game():
             else:
                 print("Invalid answer... Game over")
                 exit()
+
+print("check0")
+def play_game():
+    play_again = 'yes'
+    print("check1")
+    while play_again == 'yes':
+        print("Let's play a game!")        
+
+        
 
         def bossFight(i: int):
             counter = random.randint(1, 5)
