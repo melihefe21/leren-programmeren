@@ -9,12 +9,14 @@ class Song extends Model
 {
     use HasFactory;
 
-    public function genre(){
+    public function genre()
+    {
         return $this->belongsTo(Genre::class);
     }
 
 
-    public function playlists(){
+    public function playlists()
+    {
         return $this->belongsToMany(Playlist::class);
     }
 

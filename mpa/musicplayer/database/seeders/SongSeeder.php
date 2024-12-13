@@ -1,18 +1,35 @@
 <?php
-
 namespace Database\Seeders;
+use Illuminate\Support\Facades\DB;
 
-use App\Models\Song;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Song;
+use App\Models\Genre;
 
 class SongSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
+    public function run()
     {
-        Song::factory()->count(3000)->create();
+        $genre = Genre::firstOrCreate(['name' => 'Pop']);
+
+        Song::create([
+            'name' => 'Example liedj',
+            'genre_id' => $genre->id,
+        ]);
     }
 }
+
+{
+    {
+        DB::table('songs')->insert([
+            ['title' => 'Bohemian Rhapsody', 'artist' => 'Queen'],
+            ['title' => 'Hotel California', 'artist' => 'Eagles'],
+            ['title' => 'Stairway to Heaven', 'artist' => 'Led Zeppelin'],
+            ['title' => 'Imagine', 'artist' => 'John Lennon'],
+            ['title' => 'Hey Jude', 'artist' => 'The Beatles'],
+        ]);
+    }
+}
+
+
+

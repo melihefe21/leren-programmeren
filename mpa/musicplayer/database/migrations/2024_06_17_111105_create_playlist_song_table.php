@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('playlist_song', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->unsignedBigInteger('genre_id');
+            $table->integer('duration')->default(0);
             $table->foreignId('playlist_id');
             $table->foreignId('song_id');
             $table->timestamps();
+
         });
     }
 
