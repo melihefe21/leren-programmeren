@@ -2,6 +2,15 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <div class="mb-4 text-sm text-gray-600">
+        <!-- Development credentials -->
+        <div class="bg-blue-100 p-4 rounded-lg mb-6">
+            <h3 class="font-bold mb-2">Demo Credentials:</h3>
+            <p>Email: test@example.com</p>
+            <p>Password: password123</p>
+        </div>
+    </div>
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -9,7 +18,7 @@
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <xphp-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
