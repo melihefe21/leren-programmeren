@@ -1,25 +1,43 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>product_create</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<form action="/product/store" method="POST">
-    @csrf
-    <label for="name">name</label>
-    <input type="text"name="name">
+@extends('master.master')
+@section('content')
+    <div style="background-image: url('/images/background.jpg');">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Nieuw product toevoegen</h2>
+        <form action="/product/store" method="POST" enctype="multipart/form-data" class="space-y-4">
+            @csrf
 
-    <label for="price">prijs van het product</label>
-    <input type="number"name="price">
+            <div>
+                <label for="name" class="block text-gray-700 font-medium">Productnaam</label>
+                <input type="text" name="name" id="name" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                @error("name")
+                <span class="text-red-600">{{$message}}</span>
+                @enderror
+            </div>
 
-    <label for="amount">hoeveel stukken</label>
-    <input type="number"name="amount">
-    <input type="submit">
-</form>
+            <div>
+                <label for="price" class="block text-gray-700 font-medium">Prijs (€)</label>
+                <input type="number" name="price" id="price" step=".01" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                @error("price")
+                <span class="text-red-600">{{$message}}</span>
+                @enderror
+            </div>
 
-</body>
+            <div>
+                <label for="amount" class="block text-gray-700 font-medium">Aantal stuks</label>
+                <input type="number" name="amount" id="amount" step=".01" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                @error("amount")
+                <span class="text-red-600">{{$message}}</span>
+                @enderror
+            </div>
 
+            <div>
+                <label for="image" class="block text-gray-700 font-medium">Productafbeelding</label>
+                <input type="file" name="image" id="image" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
 
+            </div>
+
+            <div class="text-center">
+                <input type="submit" value="Product toevoegen" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 cursor-pointer">
+            </div>
+        </form>
+    </div>
+@endsection

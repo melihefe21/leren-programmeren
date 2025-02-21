@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->integer('amount');
             $table->double('price');
+            $table->double('discount');
+            $table->double
             $table->timestamps();
         });
     }

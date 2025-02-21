@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 class ProductController extends Controller
 {
     /**
@@ -59,6 +60,20 @@ class ProductController extends Controller
     }
     public function store(Request $request)
     {
+        $validated = Validator::make($request->all(),[
+            "name"=>"required|string|min:2|max:20",
+            "price"=>"required|decimal:2|numeric|min:0",
+            "amount"=>"required|integer|numeric|min:1",
+        ], [
+            "*.required"=>"de :attribute is verplicht",
+            "*.string"=>":attribute moet een tekst zijn",
+            "*.min"=>":attribute moet minstens :min zijn",
+            "*.max"=>":attribute moet maximum :max zijn",
+            "*.numeric"=>":attribute moeten nummers zijn",
+            "*.integer"=>":attribute moet een nummer zijn",
+            "price.decimal"=>":attribute moet twee nummers achter het heelgetal hebben."
+
+        ])->validate();
 
         product::create(
             [

@@ -1,29 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>products-page</title>
-    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
-</head>
-<body>
-
-<h1>hier zijn alle producten</h1>
-@foreach($products as $product)
-    @if($product->name != "fanta")
-        <p>{{$product->name}}</p>
-    @endif
-
-@endforeach
-<header>
-    <nav>
-        <ul>
-            <li><a href="http://localhost:8000/welcome" class="">welcome</a></li>
-        </ul>
-    </nav>
-</header>
+@extends('master.master')
 
 
-</body>
+@section('content')
+    <h1 class="text-2xl font-bold text-center text-gray-800 bg-gray-200 p-4 rounded-md">
+        Hier zijn alle producten
+    </h1>
 
-</html>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 p-4">
+        @foreach($products as $product)
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                <h2 class="text-lg font-semibold text-gray-700">{{ $product->name }}</h2>
+                <p class="text-gray-600 mt-1">{{ $product->description }}</p>
+                <p class="text-green-700 font-medium mt-2">€{{ number_format($product->price, 2) }}</p>
+            </div>
+        @endforeach
+    </div>
+
+
+@endsection
